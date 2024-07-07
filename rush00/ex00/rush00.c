@@ -1,50 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush00.c                                           :+:      :+:    :+:   */
+/*   rush2.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okansira <okansira@student.42kocaeli.com.  +#+  +:+       +#+        */
+/*   By: okansira <okansira@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/06 14:25:35 by okansira          #+#    #+#             */
-/*   Updated: 2024/07/06 14:58:22 by okansira         ###   ########.tr       */
+/*   Created: 2024/07/07 13:18:28 by okansira          #+#    #+#             */
+/*   Updated: 2024/07/07 15:05:02 by okansira         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
+
 void	ft_putchar(char c);
 
-void	ft_print(int len, char begin_char, char midel_char, char end_char)
+void	ft_print_line(int length, char start, char middle, char end)
 {
-	int		letter_counter;
-
-	letter_counter = 1;
-	while (letter_counter <= len)
-	{
-		if (letter_counter == 1)
-			ft_putchar(begin_char);
-		else if (letter_counter == len)
-			ft_putchar (end_char);
-		else
-			ft_putchar(midel_char);
-		letter_counter++;
-	}
+	if (length > 0)
+		ft_putchar(start);
+	while (--length > 1)
+		ft_putchar(middle);
+	if (length == 1)
+		ft_putchar(end);
 	ft_putchar('\n');
 }
 
-void	rush(int x, int y)
+void	rush(int width, int height)
 {
-	int		line_counter;
+	int	current_line;
 
-	line_counter = 1;
-	if (x >= 1 && y >= 1)
+	if (width < 1 || height < 1)
 	{
-		while (line_counter <= y)
-		{
-			if (line_counter == 1)
-				ft_print(x, 'o', '-', 'o');
-			else if (line_counter == y)
-				ft_print (x, 'o', '-', 'o');
-			else
-				ft_print (x, '|', ' ', '|');
-			line_counter++;
-		}
+		write(1, "error\n", 6);
 	}
+	current_line = height;
+	ft_print_line(width, 'o', '-', 'o');
+	while (--current_line > 1)
+		ft_print_line(width, '|', ' ', '|');
+	if (current_line == 1)
+		ft_print_line(width, 'o', '-', 'o');
 }

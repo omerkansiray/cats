@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okansira <okansira@student.42kocaeli.com.  +#+  +:+       +#+        */
+/*   By: okansira <okansira@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 14:27:00 by okansira          #+#    #+#             */
 /*   Updated: 2024/07/06 15:01:14 by okansira         ###   ########.tr       */

@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okansira <okansira@student.42kocaeli.com.  +#+  +:+       +#+        */
+/*   By: okansira <okansira@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 14:32:56 by okansira          #+#    #+#             */
-/*   Updated: 2024/07/06 15:14:29 by okansira         ###   ########.tr       */
+/*   Updated: 2024/07/07 13:48:09 by okansira         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	rush(int x, int y);
+void	rush(int width, int height);
 
 int	main(void)
 {
-	rush(5,5);
+	rush (8, 5);
 	return (0);
 }
